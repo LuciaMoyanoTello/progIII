@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+    --light-blue: #139ED9; /*para usar el mismo color cuando lo necesito*/
+}
+.form{
+    background-color: #f2f2f2;
+    padding: 24px;
+    width: 342px;
+    height: 420px;
+    border-radius: 8px; /*bordes redondos*/
+}
+h4{
+    font-size: 26px;
+    text-align: center;
+}
+                    /*cuit/cuil*/
+.form input[type="text"]{
+    display: block; /*este uno abajo del otro*/
+    padding: 4px 16px;
+    height: 30px;
+    width: 304px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    outline: none;
+}
+/*para hacer la linea en azul del label*/
+.form input[type="text"]:focus{
+    /*border-color: #139ED9;*/
+    border-color: var(--light-blue);
+}
+.form label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+                  /*Botón siguiente*/
+.form button{
+    padding: 4px 16px;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    margin: 16px 0;
+    font-weight: bold;
+    cursor: pointer; /*pasa el mouse pone una mano*/
+}
+.form button.primary{
+    /*background-color: #139ED9;*/
+    background-color: var(--light-blue);
+    color: white;
+    border: 1px solid;
+}
+                  /*Olvidaste contraseña*/
+.form a{
+    display: block;
+    text-align: center;
+    cursor:pointer;
+}
+/*cambia el color cuando paso por encima*/
+.form a:hover{
+    /*color: #139ED9;*/
+    color: var(--light-blue);
+}
+                      /*línea blanca*/
+.form .separator{
+    height: 1px;
+    /*border: 1px solid #ddd;*/
+    background-color: #ddd;
+}
+                     /*Botón Obtener clave*/
+.form button.secondary{
+    background-color: white;
+    /*color:#139ED9;
+    border:1px solid #139ED9;*/
+    color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+}
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
