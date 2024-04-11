@@ -1,0 +1,55 @@
+/*color de letras*/
+#teal{
+    color: teal;
+}
+#red{
+    color: red;
+}
+#blue{
+    color: blue;
+}
+#orange{
+    color: orange;
+}
+#purple{
+    color: purple;
+}
+#olive{
+    color: olive;
+}
+#fuchsia{
+    color: fuchsia;
+}
+#green{
+    color: green;
+}
+
+/*Color de fondo*/
+.col_rojo{
+    background-color: red;
+}
+.col_verde{
+    background-color: green;
+}
+.col_azul{
+    background-color: blue;
+}
+
+/*forma de la tabla*/
+table{
+    width: 60%;
+    border: 2px solid;
+}
+th, td{
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /*para el h1*/
+}

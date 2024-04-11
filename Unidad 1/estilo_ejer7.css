@@ -1,0 +1,23 @@
+input[type="text"]{
+    margin-right: 30px;
+    position: relative;
+    left: 130px;
+    margin-top: 2%;
+}
+input[type="tel"]{
+    margin-right: 30px;
+    position: relative;
+    left: 69px;
+    margin-top: 2%;
+}
+#email{
+    position: relative;
+    left: 84px;
+    width: 300px;
+    margin-top: 2%;
+}
+input[type="button"]{
+    position: relative;
+    left: 55%;
+    margin-top: 2%;
+}
