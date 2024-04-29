@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <button onclick="javascript: alert('Hola')">JS Inline</button>
+    <button onclick="saludo()">JS desde TAG</button>
+    <button onclick="mensaje('mensajito')">JS desde ARCHIVO</button>
+
+    <!--Puedo escribir código javascript con script-->
+    <script>
+        console.log("Este mi log")
+        const miconstante = "Hola"
+        console.log("Valor constante: " + miconstante)
+        try{
+            miconstante = "chau"
+        }catch{
+            console.error("err")
+        }
+        function saludo(){
+            alert('Hola desde función')
+        }
+        if(true){
+            var mivariablevar = "variable var"
+            let mivariablelet = "variable let"
+            console.log("Variable LET: " + mivariablelet)
+        }
+        console.log("Variable VAR: " + mivariablevar)
+        //console.log("Variable LET: " + mivariablelet)
+        /*function mensaje(){
+            alert('Hola desde archivo')
+        }*/
+    </script>
+    <script>
+        let objeto ={
+            id: 1,
+            name: "nombre"
+        }
+        console.log(objeto)
+
+        const arreglo = [
+            1,
+            "fhwir",
+            true,
+            {objeto : 1}
+        ]
+        console.log(arreglo)
+        for(let index = 0; index < arreglo.length; index++){
+            console.log("Valor en " + index + " es: " + arreglo[index])
+        }
+    </script>
+</body>
+</html>
