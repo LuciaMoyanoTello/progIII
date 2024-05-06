@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(75, 134, 115);
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    
+    <section class="d-flex align-items-center" style="height: 100vh;">
+    <div class="container">
+        <form class="row g-3" id="formulario" action="mostrar.html">
+            <h1>Formulario</h1>
+            <div class="col-md-6">
+              <label for="inputNombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="inputNombre" name="nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="inputApellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="inputApellido" name="apellido">
+            </div>
+            <div class="col-12">
+                <label for="inputEducacion" class="form-label">Nivel Educativo</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="gridRadios1" value="Primario">
+                    <label class="form-check-label" for="gridRadios1">
+                      Primario
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="gridRadios2" value="Secundario">
+                    <label class="form-check-label" for="gridRadios2">
+                      Secundario
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="gridRadios3" value="Terciario">
+                    <label class="form-check-label" for="gridRadios3">
+                      Terciario
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="gridRadios4" value="Universitario">
+                    <label class="form-check-label" for="gridRadios4">
+                      Universitario
+                    </label>
+                  </div>
+                  <label for="radios" class="error"></label>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPais" class="form-label">País</label>
+                <select id="inputPais" class="form-select" name="pais">
+                    <option selected value="">Selecciona...</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Uruguay">Uruguay</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="inputProvincia" class="form-label">Provincia</label>
+                <select id="inputProvincia" class="form-select" name="provincia">
+                    <option selected value="">Selecciona...</option>
+                    <option value="Cordoba">Córdoba</option>
+                    <option value="Santiago de Chile">Santiago de Chile</option>
+                    <option value="Montevideo">Montevideo</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="inputObservaciones" class="form-label">Observaciones</label>
+                <textarea class="form-control" name="observaciones" id="inputObservaciones"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+    </div>
+    </section>
+
+    <script>
+        const provinciaPorPais = {
+        'Argentina': 'Cordoba',
+        'Chile': 'Santiago de Chile',
+        'Uruguay': 'Montevideo'
+        };
+
+        // Función para establecer automáticamente la provincia según el país seleccionado
+        function establecerProvinciaAutomatica(paisSeleccionado) {
+            const provinciaSelect = $("#inputProvincia");
+            const provinciaDefault = provinciaPorPais[paisSeleccionado];
+
+            if (provinciaDefault) {
+                provinciaSelect.val(provinciaDefault);
+            } else {
+                provinciaSelect.val(''); // Si no hay provincia predeterminada, selecciona la opción vacía
+            }
+        }
+
+        // Evento para detectar el cambio de país
+        $("#inputPais").on('change', function() {
+            const paisSeleccionado = $(this).val();
+            establecerProvinciaAutomatica(paisSeleccionado);
+        });
+
+        // Establecer la provincia predeterminada al cargar la página según el país seleccionado inicialmente
+        const paisInicial = $("#inputPais").val();
+        establecerProvinciaAutomatica(paisInicial);
+
+        $("#formulario").validate({
+            rules:{
+                nombre:{required: true, maxlength: 100},
+                apellido:{required: true, minlength: 2, maxlength: 100},
+                radios:{required: true},
+                pais:{required: true},
+                provincia:{required: true}
+            },
+            messages:{
+                nombre:{
+                    required: "Debe ingresar un nombre",
+                    maxlength: "Debe ingresar hasta 100 caracteres"
+                },
+                apellido:{
+                    required: "Debe ingresar un apellido",
+                    minlength: "Debe ingresar por lo menos 2 caracteres",
+                    maxlength: "Debe ingresar hasta 100 caracteres"
+                },
+                radios:{required: "Elija un nivel educativo"},
+                pais:{required: "Elija un país"},
+                provincia:{required: "Elija una provincia"}
+            },
+            submitHandler:function(form){
+                let nombre = $("#inputNombre").val();
+                let apellido = $("#inputApellido").val();
+                let educacion = $("input").filter(":checked").val();
+                let pais = $("#inputPais").val();
+                let provincia = $("#inputProvincia").val();
+                let observaciones = $("#inputObservaciones").val();
+
+                localStorage.setItem("nombre",nombre);
+                localStorage.setItem("apellido",apellido);
+                localStorage.setItem("educacion",educacion);
+                localStorage.setItem("pais",pais);
+                localStorage.setItem("provincia",provincia);
+                localStorage.setItem("observaciones",observaciones);
+
+                form.submit();
+            }
+        });
+    </script>
+</body>
+</html>
