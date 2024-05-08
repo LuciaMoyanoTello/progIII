@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .container{
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 8px;
+            background-color: aliceblue;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    
+    <section class="d-flex align-items-center" style="height: 100vh;">
+        <div class="container">
+            <form class="col g-3" id="login" action="alta.html">
+                <div class="col-md-12 mb-3">
+                  <label for="inputEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" name="email">
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="inputClave" class="form-label">Clave</label>
+                  <input type="password" class="form-control" id="inputClave" name="clave">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        $("#login").validate({
+            rules:{
+                email:{required: true, email: true},
+                clave:{required: true}
+            },
+            messages:{
+                email:{
+                    required: "Debe ingresar un email",
+                    email: "Debe ingresar un email válido"
+                },
+                clave:{required: "Debe ingresar una clave"}
+            },
+            submitHandler:function(form){
+                let email = $("#inputEmail").val();
+                let clave = $("#inputClave").val();
+
+                if(email == "tup2022@tup.com.ar" && clave == "123456"){
+                    form.submit();
+                } else {
+                    alert("Clave o email incorrectos");
+                }
+            }
+        })
+    </script>
+  </body>
+</html>
