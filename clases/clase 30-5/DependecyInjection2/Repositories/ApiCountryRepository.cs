@@ -1,0 +1,55 @@
+﻿
+using DependecyInjection2.Domain;
+
+namespace DependecyInjection2.Repositories
+{
+    public class ApiCountryRepository : ICountryRepository
+    {
+        private readonly HttpClient _httpClient;
+
+        public ApiCountryRepository(IHttpClientFactory httpClientFactory)
+        {
+            _httpClient = httpClientFactory.CreateClient("CountryApi");
+        }
+
+        public async Task<List<Country>> GetAllAsync()
+        {
+            //ese all es de la pagina restcountry.com, elegir el all
+            //listado de countryapidto porque hay varios
+            try
+            {
+                var response = await _httpClient.GetFromJsonAsync<List<CountryApiDto>>("all");
+
+                /*var list = new List<Country>();
+                foreach (var item in response)
+                {
+                    list.Add(new Country
+                    {
+                        Id = item.ccn3,
+                        Name = item.Name.official
+                    });
+                }*/
+                return response.Select(x => new Country
+                {
+                    Id = x.ccn3,
+                    Name = x.Name.official
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                return new List<Country>();
+            }
+        }
+    }
+    internal class CountryApiDto
+    {
+        public CountryApiNameDto Name { get; set; }
+        public string ccn3 { get; set; }
+
+    }
+
+    internal class CountryApiNameDto
+    {
+        public string official { get; set; }
+    }
+}
