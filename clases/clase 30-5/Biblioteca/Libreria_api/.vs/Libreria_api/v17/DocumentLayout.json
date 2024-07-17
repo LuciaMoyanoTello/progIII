@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|c:\\users\\lucia\\onedrive\\escritorio\\documentos\\3 a\u00F1o\\programaci\u00F3n\\progiii\\clases\\clase 30-5\\biblioteca\\libreria_api\\libreria_api\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|solutionrelative:libreria_api\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|c:\\users\\lucia\\onedrive\\escritorio\\documentos\\3 a\u00F1o\\programaci\u00F3n\\progiii\\clases\\clase 30-5\\biblioteca\\libreria_api\\libreria_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|solutionrelative:libreria_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|c:\\users\\lucia\\onedrive\\escritorio\\documentos\\3 a\u00F1o\\programaci\u00F3n\\progiii\\clases\\clase 30-5\\biblioteca\\libreria_api\\libreria_api\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|solutionrelative:libreria_api\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|c:\\users\\lucia\\onedrive\\escritorio\\documentos\\3 a\u00F1o\\programaci\u00F3n\\progiii\\clases\\clase 30-5\\biblioteca\\libreria_api\\libreria_api\\controllers\\generocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|solutionrelative:libreria_api\\controllers\\generocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|c:\\users\\lucia\\onedrive\\escritorio\\documentos\\3 a\u00F1o\\programaci\u00F3n\\progiii\\clases\\clase 30-5\\biblioteca\\libreria_api\\libreria_api\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1774276D-BA18-4B23-B952-74E2AD608C18}|Libreria_api\\Libreria_api.csproj|solutionrelative:libreria_api\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Program.cs",
+              "RelativeDocumentMoniker": "Libreria_api\\Program.cs",
+              "ToolTip": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Program.cs",
+              "RelativeToolTip": "Libreria_api\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvyYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T20:45:45.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibroController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Controllers\\LibroController.cs",
+              "RelativeDocumentMoniker": "Libreria_api\\Controllers\\LibroController.cs",
+              "ToolTip": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Controllers\\LibroController.cs",
+              "RelativeToolTip": "Libreria_api\\Controllers\\LibroController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwCkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T01:01:54.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Libro.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Entidades\\Libro.cs",
+              "RelativeDocumentMoniker": "Libreria_api\\Entidades\\Libro.cs",
+              "ToolTip": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Entidades\\Libro.cs",
+              "RelativeToolTip": "Libreria_api\\Entidades\\Libro.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T20:25:48.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GeneroController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Controllers\\GeneroController.cs",
+              "RelativeDocumentMoniker": "Libreria_api\\Controllers\\GeneroController.cs",
+              "ToolTip": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Controllers\\GeneroController.cs",
+              "RelativeToolTip": "Libreria_api\\Controllers\\GeneroController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T01:20:48.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AutorController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Controllers\\AutorController.cs",
+              "RelativeDocumentMoniker": "Libreria_api\\Controllers\\AutorController.cs",
+              "ToolTip": "C:\\Users\\lucia\\OneDrive\\Escritorio\\Documentos\\3 a\u00F1o\\programaci\u00F3n\\progIII\\clases\\clase 30-5\\Biblioteca\\Libreria_api\\Libreria_api\\Controllers\\AutorController.cs",
+              "RelativeToolTip": "Libreria_api\\Controllers\\AutorController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAArwBsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T01:15:59.246Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

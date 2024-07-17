@@ -10,6 +10,12 @@ namespace DependecyInjection2.Repositories
             new Country{Id = "2", Name = "Francia"},
             new Country{Id = "3", Name = "Brasil"}
         };
+
+        public Task<Country> CreateAsync(Country country)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<List<Country>> GetAllAsync()
         {
             return Task.FromResult(countries);

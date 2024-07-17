@@ -11,6 +11,12 @@ namespace DependecyInjection2.Repositories
         {
             _webHostEnvironment = webHostEnvironment;
         }
+
+        public Task<Country> CreateAsync(Country country)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<Country>> GetAllAsync()
         {
             var basePath = _webHostEnvironment.ContentRootPath;

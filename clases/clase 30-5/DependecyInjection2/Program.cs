@@ -16,6 +16,7 @@ builder.Services.AddSwaggerGen();
     context.UseSqlServer(builder.Configuration.GetConnectionString("CountryDb"));
 });*/
 
+builder.Services.AddTransient<ICountryRepository, DbCountryRepository>();
 //para api
 builder.Services.AddSingleton<ICountryRepository, ApiCountryRepository>();
 builder.Services.AddHttpClient("CountryApi", x =>
@@ -31,7 +32,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+//CORS
+app.UseCors(options =>
+{
+    options.AllowAnyOrigin();
+    options.AllowAnyHeader();
+    options.AllowAnyMethod();
+});
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

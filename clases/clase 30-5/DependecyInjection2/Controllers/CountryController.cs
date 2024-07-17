@@ -1,4 +1,5 @@
-﻿using DependecyInjection2.Repositories;
+﻿using DependecyInjection2.Domain;
+using DependecyInjection2.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DependecyInjection2.Controllers
@@ -27,6 +28,13 @@ namespace DependecyInjection2.Controllers
         {
             var countries = await _countryRepository.GetAllAsync();
             return Ok(countries);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] Country dto)
+        {
+            var response = await _countryRepository.CreateAsync(dto);
+            return Ok(response);
         }
     }
 }

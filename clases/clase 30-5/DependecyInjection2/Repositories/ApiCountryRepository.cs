@@ -12,6 +12,11 @@ namespace DependecyInjection2.Repositories
             _httpClient = httpClientFactory.CreateClient("CountryApi");
         }
 
+        public Task<Country> CreateAsync(Country country)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<Country>> GetAllAsync()
         {
             //ese all es de la pagina restcountry.com, elegir el all

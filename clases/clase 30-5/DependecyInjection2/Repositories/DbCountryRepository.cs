@@ -11,6 +11,14 @@ namespace DependecyInjection2.Repositories
         {
             _context = context;
         }
+
+        public async Task<Country> CreateAsync(Country country)
+        {
+            await _context.Countries.AddAsync(country);
+            await _context.SaveChangesAsync();
+            return country;
+        }
+
         public Task<List<Country>> GetAllAsync()
         {
             return _context.Countries.ToListAsync();
